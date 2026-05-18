@@ -62,6 +62,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBalanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBalanta.Designer.cs">
+      <DependentUpon>frmBalanta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConturi.Designer.cs">
+      <DependentUpon>frmConturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRulaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRulaje.Designer.cs">
+      <DependentUpon>frmRulaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +103,15 @@
     <Compile Include="Rulaje.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConturi.resx">
+      <DependentUpon>frmConturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRulaje.resx">
+      <DependentUpon>frmRulaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,6 +129,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Cont.datasource" />
+    <None Include="Properties\DataSources\Operatie.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,5 +159,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

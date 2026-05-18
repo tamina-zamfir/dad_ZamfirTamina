@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dad_ZamfirTamina.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,29 @@ using System.Windows.Forms;
 
 namespace dad_ZamfirTamina
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void btnConturi_Click(object sender, EventArgs e)
+        {
+            var frm = new frmConturi();
+            frm.Show();
+        }
+
+        private void btnRulaje_Click(object sender, EventArgs e)
+        {
+            var frm = new frmRulaje();
+            frm.Show();
+        }
+
+        private void btnBalanta_Click(object sender, EventArgs e)
+        {
+            var frm = new frmBalanta();
+            frm.Show();
         }
     }
 }
