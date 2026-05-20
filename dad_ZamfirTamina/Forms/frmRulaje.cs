@@ -28,7 +28,10 @@ namespace dad_ZamfirTamina.Forms
         private void frmRulaje_Load(object sender, EventArgs e)
         {
             dad.Operatie.Include("Rulaje").Load();
-            bindingSource1.DataSource = dad.Operatie.Local.ToBindingList();
+            bsOperatie.DataSource = dad.Operatie.Local.ToBindingList();
+
+            dad.Cont.Load();
+            bsConturi.DataSource = dad.Cont.Local;
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
@@ -36,9 +39,9 @@ namespace dad_ZamfirTamina.Forms
             try
             {
                 this.Validate();
-                this.bindingSource1.EndEdit();
+                this.bsOperatie.EndEdit();
                 dad.SaveChanges();
-                bindingSource1.ResetBindings(false);
+                bsOperatie.ResetBindings(false);
                 MessageBox.Show("Datele au fost salvate");
             }
             catch (Exception ex)
@@ -46,5 +49,15 @@ namespace dad_ZamfirTamina.Forms
                 MessageBox.Show($"Datele nu pot fi salvate! {ex.Message}");
             }
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+    }
+
+    public class myColl<T> : System.Collections.ObjectModel.ObservableCollection<T>
+    {
+
     }
 }
